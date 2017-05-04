@@ -1,0 +1,12 @@
+﻿@model List<RecordAuction.Models.RecordCondition>
+
+<h1>Record Conditions</h1>
+
+@foreach (var condition in Model)
+{
+    <ul>
+        <li>@condition.Name</li>
+    </ul>
+}
+
+<p><a asp-controller="Condition" asp-action="Add">Add Record Condition</a></p>

@@ -1,0 +1,15 @@
+﻿@model RecordAuction.ViewModels.AddConditionViewModel
+
+<h1>Add Record Condition</h1>
+
+<form asp-controller="Condition" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <input type="submit" value="Add Record Condition" />
+
+</form>
