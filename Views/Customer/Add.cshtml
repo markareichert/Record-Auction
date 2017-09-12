@@ -1,0 +1,52 @@
+﻿@model RecordAuction.ViewModels.AddCustomerViewModel
+<h1>Add Customer</h1>
+
+<form asp-controller="Customer" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address1"></label>
+        <input class="form-control" asp-for="Address1" />
+        <span asp-validation-for="Address1"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address2"></label>
+        <input class="form-control" asp-for="Address2" />
+        <span asp-validation-for="Address2"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address3"></label>
+        <input class="form-control" asp-for="Address3" />
+        <span asp-validation-for="Address3"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input class="form-control" asp-for="City" />
+        <span asp-validation-for="City"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="State"></label>
+        <input class="form-control" asp-for="State" />
+        <span asp-validation-for="State"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ZipCode"></label>
+        <input class="form-control" asp-for="ZipCode" />
+        <span asp-validation-for="ZipCode"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Country"></label>
+        <input class="form-control" asp-for="Country" />
+        <span asp-validation-for="Country"></span>
+    </div>
+    <input type="submit" value="Add Customer" />
+</form>

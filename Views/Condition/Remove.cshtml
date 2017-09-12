@@ -1,0 +1,13 @@
+﻿<h1>@ViewBag.title</h1>
+
+<form method="post">
+
+    @foreach (var condition in ViewBag.conditions)
+    {
+        <input type="checkbox" name="conditionIds" id="@condition.ID" value="@condition.ID" />
+        <label for="@condition.ID">@string.Format("{0}", condition.Name)</label>
+        <br />
+    }
+
+    <input type="submit" value="Remove Selected Condition(s)" />
+</form>

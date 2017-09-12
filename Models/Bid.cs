@@ -8,6 +8,7 @@ namespace RecordAuction.Models
     public class Bid
     {
         public decimal Amount { get; set; }
+        public int CustomerID { get; set; }
         public int ID { get; set; }
     }
 }

@@ -33,6 +33,10 @@ namespace RecordAuction.ViewModels
         [Display(Name = "Record Number at Label")]
         public int RecordNumber { get; set; }
 
+        [Required(ErrorMessage = "You must give the record's minimum accepted bid value for auction")]
+        [Display(Name = "Minimum Bid Value")]
+        public decimal MinValue { get; set; }
+
         [Required]
         [Display(Name = "Record Condition")]
         public int ConditionID { get; set; }

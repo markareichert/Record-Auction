@@ -54,5 +54,26 @@ namespace RecordAuction.Controllers
 
             return View(addConditionViewModel);
         }
+
+        public IActionResult Remove()
+        {
+            ViewBag.title = "Remove Conditions";
+            ViewBag.conditions = context.RecordConditions.ToList();
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Remove(int[] conditionIds)
+        {
+            foreach (int conditionId in conditionIds)
+            {
+                RecordCondition theCondition = context.RecordConditions.Single(c => c.ID == conditionId);
+                context.RecordConditions.Remove(theCondition);
+            }
+
+            context.SaveChanges();
+
+            return Redirect("/");
+        }
     }
 }

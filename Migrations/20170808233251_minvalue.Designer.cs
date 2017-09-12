@@ -8,9 +8,10 @@ using RecordAuction.Data;
 namespace RecordAuction.Migrations
 {
     [DbContext(typeof(RecordDbContext))]
-    partial class RecordDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170808233251_minvalue")]
+    partial class minvalue
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

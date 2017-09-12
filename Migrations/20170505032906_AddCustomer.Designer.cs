@@ -8,9 +8,10 @@ using RecordAuction.Data;
 namespace RecordAuction.Migrations
 {
     [DbContext(typeof(RecordDbContext))]
-    partial class RecordDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170505032906_AddCustomer")]
+    partial class AddCustomer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -54,8 +55,6 @@ namespace RecordAuction.Migrations
                     b.Property<int>("ConditionID");
 
                     b.Property<string>("Label");
-
-                    b.Property<decimal>("MinValue");
 
                     b.Property<string>("Notes");
 

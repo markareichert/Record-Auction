@@ -11,6 +11,7 @@ namespace RecordAuction.Data
     {
         public DbSet<Record> Records { get; set; }
         public DbSet<RecordCondition> RecordConditions { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public RecordDbContext(DbContextOptions<RecordDbContext> options)
         : base(options)

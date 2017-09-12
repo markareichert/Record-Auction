@@ -15,6 +15,7 @@ namespace RecordAuction.Models
         public int RecordNumber { get; set; }
         public int ConditionID { get; set; }
         public RecordCondition Condition { get; set; }
+        public decimal MinValue { get; set; }
         public int ID { get; set; }
     }
 }

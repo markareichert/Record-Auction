@@ -5,9 +5,9 @@
     @foreach (var record in ViewBag.records)
     {
         <input type="checkbox" name="recordIds" id="@record.ID" value="@record.ID" />
-        <label for="@Record.ID">@record.RecordNumber</label>
+        <label for="@record.ID">@string.Format("{0} {1}", record.Label, record.RecordNumber)</label>
         <br />
     }
 
-    <input type="submit" value="Remove Selected Cheese(s)" />
+    <input type="submit" value="Remove Selected Record(s)" />
 </form>

@@ -67,7 +67,7 @@ namespace RecordAuction.Controllers
         public IActionResult Remove()
         {
             ViewBag.title = "Remove Records";
-            ViewBag.cheeses = context.Records.ToList();
+            ViewBag.records = context.Records.ToList();
             return View();
         }
 

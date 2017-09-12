@@ -1,0 +1,13 @@
+﻿<h1>@ViewBag.title</h1>
+
+<form method="post">
+
+    @foreach (var customer in ViewBag.customers)
+    {
+        <input type="checkbox" name="customerIds" id="@customer.ID" value="@customer.ID" />
+        <label for="@customer.ID">@string.Format("{0} {1}", customer.FirstName, customer.LastName)</label>
+        <br />
+    }
+
+    <input type="submit" value="Remove Selected Customer(s)" />
+</form>

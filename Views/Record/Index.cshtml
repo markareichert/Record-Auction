@@ -12,6 +12,7 @@
         <th>Label</th>
         <th>Number</th>
         <th>Condition</th>
+        <th>Min Value</th>
     </tr>
 
     @foreach (var record in Model)
@@ -24,6 +25,7 @@
             <td>@record.Label</td>
             <td>@record.RecordNumber</td>
             <td>@record.Condition.Name</td>
+            <td>@record.MinValue</td>
         </tr>
     }
 </table>

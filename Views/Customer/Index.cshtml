@@ -1,0 +1,43 @@
+﻿@model List<RecordAuction.Models.Customer>
+
+<h1>Customers</h1>
+
+<table class="table">
+
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address 1</th>
+        <th>Address 2</th>
+        <th>Address 3</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Country</th>
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.Address1</td>
+            <td>@customer.Address2</td>
+            <td>@customer.Address3</td>
+            <td>@customer.City</td>
+            <td>@customer.State</td>
+            <td>@customer.ZIPCode</td>
+            <td>@customer.Country</td>
+        </tr>
+    }
+</table>
+
+@if (Model.Count == 0)
+{
+    <p>No customers yet!</p>
+}
+
+<p>
+    <a asp-controller="Customer" asp-action="Add">Add |</a>
+    <a asp-controller="Customer" asp-action="Remove">Remove</a>
+</p>
